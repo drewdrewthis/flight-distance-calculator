@@ -139,7 +139,7 @@ app.selectAirport = function(id) {
         var elements = document.querySelectorAll(`*[data-airportcode="${id}"]`);
         elements = Array.from(elements);
         elements.forEach(el => {
-            console.log(el);
+            //console.log(el);
             el.classList.toggle('active');
         });
     }
@@ -207,7 +207,7 @@ app.updateDistance = function(distance) {
     // Creates animated counter from 0 to distance
     for (let dist = 0; dist <= counter_end; dist++) {
         setTimeout(() => {
-            requestAnimationFrame(text_area.innerHTML = dist);
+            requestAnimationFrame(function() {text_area.textContent = dist});
         }, dist/2);
     }
 }
