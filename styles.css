@@ -1,0 +1,228 @@
+/* Mobile First - Vertical */
+
+h1 {
+    font-size: 1.5em;
+}
+
+body {
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+}
+
+body:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #0071bc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .65;
+}
+
+
+/* Header Styles */
+
+#header {
+    background: white;
+    height: 75px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.subheader {
+    opacity: .8;
+}
+
+.logo-wrapper {
+    width: 150px;
+    margin: auto;
+    position: relative;
+    top: 30px;
+}
+
+#logo {
+    width: 100%;
+}
+
+
+/* Main Section Styles */
+
+#main {
+    display: block;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#main-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+
+/* Airport Circles (Small screens only) */
+
+ul#airport-list {
+    list-style: none;
+    padding: 0;
+    margin: none;
+}
+
+ul#airport-list li {
+    transition: all 0.3s ease;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    display: inline-block;
+    border: 3px solid white;
+    line-height: 50px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+ul#airport-list li.active {
+    color: #0071bc;
+    background: white;
+}
+
+
+/* Map */
+
+#map {
+    display: none;
+    width: 75%;
+    margin: auto;
+}
+
+#map svg {
+    width: 100%;
+}
+
+#map .st1 {
+    fill: white;
+    opacity: .8;
+}
+
+#map .pin {
+    opacity: .5;
+}
+
+
+/* User Input Form */
+
+.form-wrapper {
+    display: none;
+}
+
+.select-box {
+    display: block;
+    font-size: 1.1em;
+    background-color: transparent;
+    margin: 10px auto;
+}
+
+.select-box label {
+    display: block;
+}
+
+.select-box input {
+    width: 100%;
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* Miles Display */
+
+#miles-wrapper {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.connector-text {
+    vertical-align: 50%;
+    padding: 0 10px;
+    margin: 20px;
+    font-size: 1.5em;
+}
+
+
+/* Medium screens - Horizontal */
+
+@media screen and (min-height:542px) {
+    .form-wrapper {
+        display: block;
+    }
+}
+
+
+/* Larger screens */
+
+@media screen and (min-width:768px) and (min-height:836px) {
+    /* General Styles */
+    h1 {
+        font-size: 2em;
+    }
+    /* Map Styles */
+    #map {
+        display: block;
+    }
+    /* Airport Display Circles Styles */
+    .where-we-fly {
+        display: none;
+    }
+    ul#airport-list li:hover {
+        color: #0071bc;
+        background: white;
+    }
+    /* Form Styles */
+    .select-box {
+        display: inline-block;
+        width: 40%;
+        margin: 10px auto;
+    }
+    .connector-text.down {
+        display: none;
+    }
+    .connector-text.right {
+        display: initial;
+    }
+    /* Hover styles
+	 * place here because they interfere with mobile
+	 */
+    #map .pin.active,
+    #map .pin:hover {
+        opacity: 1;
+    }
+}
+
+
+/* Hide Classes */
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}

@@ -1,0 +1,32 @@
+<h2 id="overview">Overview</h2>
+<p>Design and implement a single-page application that calculates and displays, given user input, the distance between two airports.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>A simple, clean design that puts easy user interaction first</li>
+<li>Flights only between the following airports - JFK, LAX, LAS, PDX</li>
+<li>Use best practice (HTML/CSS/Javascript)</li>
+<li>Use of jQuery is acceptable</li>
+</ul>
+<h2 id="bonuses">Bonuses</h2>
+<ul>
+<li>Think outside the norm - surprise us!</li>
+</ul>
+<h2 id="tools-provided">Tools provided</h2>
+<p>You have at your disposal two Javascript functions - <code>IntentMedia.Distances.distance_between_airports</code> - which takes two, three letter airport codes as arguments, and <code>IntentMedia.Airports.airport_exists</code> which takes one, three letter airport code. </p>
+<p>An example usage of the <code>distance_between_airports</code> function is:</p>
+<pre><code class="lang-javascript">&gt; IntentMedia.Distances.distance_between_airports(&quot;JFK&quot;, &quot;LAX&quot;)
+2475
+
+&gt; IntentMedia.Distances.distance_between_airports(&quot;JFK&quot;, &quot;JFK&quot;)
+0
+
+&gt; IntentMedia.Distances.distance_between_airports(&quot;JFK&quot;, &quot;NON&quot;)
+-1
+</code></pre>
+<p>An example usage of the <code>airport_exists</code> function is:</p>
+<pre><code class="lang-javascript">&gt; IntentMedia.Airports.airport_exists(&quot;JFK&quot;)
+true
+
+&gt; IntentMedia.Airports.airport_exists(&quot;NON&quot;)
+false
+</code></pre>
